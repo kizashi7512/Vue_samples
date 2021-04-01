@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+<div id='app1'>
+  <span v-if='seen'>あいうえお</span>
+  <button v-on:click='off'>表示OFF</button>
+</div>
+
+<script>
+  const App1 = {
+    data() {
+      return {
+        seen: true
+      } 
+    },
+    methods: {
+      off: function () {
+        this.seen = false
+      }
+    }
+  }
+
+  app1 = Vue.createApp(App1)
+  app1.mount('#app1')
+</script>
+</body>
+</html>
